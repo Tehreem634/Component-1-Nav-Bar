@@ -6,10 +6,11 @@ Name: Tehreem Fatima
 Date: 16/07/2025 - 17/07/2025
 Purpose: Create a working navigation bar on the bottom of my app frame. 
 '''
-
 import tkinter as tk
 from tkinter import *
 import tkinter.font
+from PIL import Image, ImageTk
+import customtkinter
 
 # Creating main window
 # Using variables
@@ -19,6 +20,9 @@ win = tk.Tk()
 style1 = tk.font.Font(size = 25)
 style2 = tk.font.Font(size = 20)
 
+# Button image
+button_image_1 = ImageTk.PhotoImage(Image.open("home_page_icon.png").resize((20,20)))
+                                    
 # All pages will be in the main container of win
 page1 = Frame(win)
 page2 = Frame(win)
@@ -56,117 +60,117 @@ label6.pack(pady=20)
 
 # Displaying buttons on page 1 that lead to their own frames
 button1 = Button(page1, text="Show Page 1", command=lambda: page1.tkraise(), font=style2)
-button1.pack() 
+button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
 button2 = Button(page1, text="Show Page 2", command=lambda: page2.tkraise(), font=style2)
-button2.pack()
+button2.pack(side=tk.LEFT, padx=0, pady=560)
 
 button3 = Button(page1, text="Show Page 3", command=lambda: page3.tkraise(), font=style2)
-button3.pack()
+button3.pack(side=tk.LEFT, padx=0, pady=560)
 
 button4 = Button(page1, text="Show Page 4", command=lambda: page4.tkraise(), font=style2)
-button4.pack()
+button4.pack(side=tk.LEFT, padx=0, pady=560)
 
 button5 = Button(page1, text="Show Page 5", command=lambda: page5.tkraise(), font=style2)
-button5.pack()
+button5.pack(side=tk.LEFT, padx=0, pady=560)
 
 button6 = Button(page1, text="Show Page 6", command=lambda: page6.tkraise(), font=style2)
-button6.pack()
+button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 2
 button1 = Button(page2, text="Show Page 1", command=lambda: page1.tkraise(), font=style2)
-button1.pack() 
+button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
 button2 = Button(page2, text="Show Page 2", command=lambda: page2.tkraise(), font=style2)
-button2.pack()
+button2.pack(side=tk.LEFT, padx=0, pady=560)
 
 button3 = Button(page2, text="Show Page 3", command=lambda: page3.tkraise(), font=style2)
-button3.pack()
+button3.pack(side=tk.LEFT, padx=0, pady=560)
 
 button4 = Button(page2, text="Show Page 4", command=lambda: page4.tkraise(), font=style2)
-button4.pack()
+button4.pack(side=tk.LEFT, padx=0, pady=560)
 
 button5 = Button(page2, text="Show Page 5", command=lambda: page5.tkraise(), font=style2)
-button5.pack()
+button5.pack(side=tk.LEFT, padx=0, pady=560)
 
 button6 = Button(page2, text="Show Page 6", command=lambda: page6.tkraise(), font=style2)
-button6.pack()
+button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 3
 button1 = Button(page3, text="Show Page 1", command=lambda: page1.tkraise(), font=style2)
-button1.pack() 
+button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
 button2 = Button(page3, text="Show Page 2", command=lambda: page2.tkraise(), font=style2)
-button2.pack()
+button2.pack(side=tk.LEFT, padx=0, pady=560)
 
 button3 = Button(page3, text="Show Page 3", command=lambda: page3.tkraise(), font=style2)
-button3.pack()
+button3.pack(side=tk.LEFT, padx=0, pady=560)
 
 button4 = Button(page3, text="Show Page 4", command=lambda: page4.tkraise(), font=style2)
-button4.pack()
+button4.pack(side=tk.LEFT, padx=0, pady=560)
 
 button5 = Button(page3, text="Show Page 5", command=lambda: page5.tkraise(), font=style2)
-button5.pack()
+button5.pack(side=tk.LEFT, padx=0, pady=560)
 
 button6 = Button(page3, text="Show Page 6", command=lambda: page6.tkraise(), font=style2)
-button6.pack()
+button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 4
 button1 = Button(page4, text="Show Page 1", command=lambda: page1.tkraise(), font=style2)
-button1.pack() 
+button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
 button2 = Button(page4, text="Show Page 2", command=lambda: page2.tkraise(), font=style2)
-button2.pack()
+button2.pack(side=tk.LEFT, padx=0, pady=560)
 
 button3 = Button(page4, text="Show Page 3", command=lambda: page3.tkraise(), font=style2)
-button3.pack()
+button3.pack(side=tk.LEFT, padx=0, pady=560)
 
 button4 = Button(page4, text="Show Page 4", command=lambda: page4.tkraise(), font=style2)
-button4.pack()
+button4.pack(side=tk.LEFT, padx=0, pady=560)
 
 button5 = Button(page4, text="Show Page 5", command=lambda: page5.tkraise(), font=style2)
-button5.pack()
+button5.pack(side=tk.LEFT, padx=0, pady=560)
 
 button6 = Button(page4, text="Show Page 6", command=lambda: page6.tkraise(), font=style2)
-button6.pack()
+button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 5
 button1 = Button(page5, text="Show Page 1", command=lambda: page1.tkraise(), font=style2)
-button1.pack() 
+button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
 button2 = Button(page5, text="Show Page 2", command=lambda: page2.tkraise(), font=style2)
-button2.pack()
+button2.pack(side=tk.LEFT, padx=0, pady=560)
 
 button3 = Button(page5, text="Show Page 3", command=lambda: page3.tkraise(), font=style2)
-button3.pack()
+button3.pack(side=tk.LEFT, padx=0, pady=560)
 
 button4 = Button(page5, text="Show Page 4", command=lambda: page4.tkraise(), font=style2)
-button4.pack()
+button4.pack(side=tk.LEFT, padx=0, pady=560)
 
 button5 = Button(page5, text="Show Page 5", command=lambda: page5.tkraise(), font=style2)
-button5.pack()
+button5.pack(side=tk.LEFT, padx=0, pady=560)
 
 button6 = Button(page5, text="Show Page 6", command=lambda: page6.tkraise(), font=style2)
-button6.pack()
+button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 6
 button1 = Button(page6, text="Show Page 1", command=lambda: page1.tkraise(), font=style2)
-button1.pack()
+button1.pack(side=tk.LEFT, padx=0, pady=560)
 
 button2 = Button(page6, text="Show Page 2", command=lambda: page2.tkraise(), font=style2)
-button2.pack()
+button2.pack(side=tk.LEFT, padx=0, pady=560)
 
 button3 = Button(page6, text="Show Page 3", command=lambda: page3.tkraise(), font=style2)
-button3.pack()
+button3.pack(side=tk.LEFT, padx=0, pady=560)
 
 button4 = Button(page6, text="Show Page 4", command=lambda: page4.tkraise(), font=style2)
-button4.pack()
+button4.pack(side=tk.LEFT, padx=0, pady=560)
 
 button5 = Button(page6, text="Show Page 5", command=lambda: page5.tkraise(), font=style2)
-button5.pack()
+button5.pack(side=tk.LEFT, padx=0, pady=560)
 
 button6 = Button(page6, text="Show Page 6", command=lambda: page6.tkraise(), font=style2)
-button6.pack()
+button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 
 # Page 1 (Frame 1) will show on the initial window when run
@@ -174,5 +178,5 @@ page1.tkraise()
 
 # Specifications/Dimensions
 win.title("Muslim Helper NZ")
-win.geometry("500x400")
+win.geometry("600x700")
 win.mainloop()
