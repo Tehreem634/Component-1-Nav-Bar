@@ -1,11 +1,12 @@
 '''
 COMPONENT #1
-[Navigation Bar]
+**Testing buttons for potential placements/figuring out**
 
 Name: Tehreem Fatima
-Date: 16/07/2025 - 17/07/2025
+Date: 20/07/2025 - 20/07/2025
 Purpose: Create a working navigation bar on the bottom of my app frame. 
 '''
+# Importing libraries
 import tkinter as tk
 from tkinter import *
 import tkinter.font
@@ -55,7 +56,7 @@ label6.pack(pady=20)
 
 # Displaying buttons on page 1 that lead to their own frames
 button1 = Button(page1, text="Show Page 1", command=lambda: page1.tkraise(), font=style2)
-button1.pack()
+button1.pack(side=tk.LEFT, padx=40, pady=150)
 
 # Page 1 (Frame 1) will show on the initial window when run
 page1.tkraise()
