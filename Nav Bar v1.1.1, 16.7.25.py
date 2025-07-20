@@ -16,6 +16,10 @@ import customtkinter
 # Using variables
 win = tk.Tk() 
 
+# Styles for increasing font size
+style1 = tk.font.Font(size = 25)
+style2 = tk.font.Font(size = 20)
+
 # Button image
 button_image_1 = ImageTk.PhotoImage(Image.open("home_page_icon.png").resize((100,100)))
 button_image_2 = ImageTk.PhotoImage(Image.open("prayers_page_icon.png").resize((100,100)))
