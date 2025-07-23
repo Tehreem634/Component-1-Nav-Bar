@@ -12,10 +12,30 @@ import tkinter as tk
 from tkinter import *
 import tkinter.font
 from PIL import Image, ImageTk
+
+def on_button_click(button):
+    """Changes the button image on click and reverts after a delay."""
+    button.config(image=button_image_1b)
+    
+    # Revert image after 500 milliseconds
+    button.after(500, lambda: button.config(image=button_image_1))
     
 # Creating main window
 # Using variables
 win = tk.Tk()
+
+# Load images (replace with your actual image paths)
+# For demonstration, let's assume you have 'default.png' and 'clicked.png'
+try:
+    button_image_1 = ImageTk.PhotoImage(Image.open("home_page_icon.png").resize((100,100)))
+    button_image_1b = ImageTk.PhotoImage(Image.open("home_page_iconb.png").resize((100,100)))
+except tk.TclError:
+    print("Error: Ensure 'default.png' and 'clicked.png' exist in the same directory.")
+    # Create dummy images if files are not found for demonstration
+    button_image_1 = tk.PhotoImage(width=100, height=50)
+    button_image_1.put("blue", to=(0,0,99,49))
+    button_image_1b = tk.PhotoImage(width=100, height=50)
+    button_image_1b.put("red", to=(0,0,99,49))
 
 # Styles for increasing font size
 style1 = tk.font.Font(size = 25)
@@ -23,6 +43,7 @@ style2 = tk.font.Font(size = 20)
 
 # Button image
 button_image_1 = ImageTk.PhotoImage(Image.open("home_page_icon.png").resize((100,100)))
+button_image_1b = ImageTk.PhotoImage(Image.open("home_page_iconb.png").resize((100,100)))
 button_image_2 = ImageTk.PhotoImage(Image.open("prayers_page_icon.png").resize((100,100)))
 button_image_3 = ImageTk.PhotoImage(Image.open("qibla_page_icon.png").resize((100,100)))
 button_image_4 = ImageTk.PhotoImage(Image.open("community_page_icon.png").resize((100,100)))
@@ -71,8 +92,10 @@ label6 = tk.Label(page6, text="Settings Page", font=style1, bg="#070B34", fg="wh
 label6.pack(pady=20)
 
 # Displaying buttons on page 1 that lead to their own frames
-button1 = Button(page1, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
-button1.pack(side=tk.LEFT, padx=0, pady=560) 
+button1 = Button(page1, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
+button1.pack(side=tk.LEFT, padx=0, pady=560)
+button1.config(command=lambda: on_button_click(button1))
+
 
 button2 = Button(page1, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
 button2.pack(side=tk.LEFT, padx=0, pady=560)
@@ -189,10 +212,13 @@ page1.tkraise()
 
 # Load the image using PhotoImage
 icon_image = tk.PhotoImage(file="icon.png")
+
 # Set the icon
 win.iconphoto(False, icon_image)
 
 # Specifications/Dimensions
 win.title("Muslim Helper NZ")
-win.geometry("635x750")
+win.geometry("610x750")
+win.resizable(height = None, width = None)
 win.mainloop()
+
