@@ -20,18 +20,17 @@ def on_button_click(button):
     # Revert image after 500 milliseconds
     button.after(500, lambda: button.config(image=button_image_1))
     
-# Creating main window
+# Creating main window called 'win'
 # Using variables
 win = tk.Tk()
 
-# Load images (replace with your actual image paths)
-# For demonstration, let's assume you have 'default.png' and 'clicked.png'
+# Load images and display error message if images do not exist
 try:
     button_image_1 = ImageTk.PhotoImage(Image.open("home_page_icon.png").resize((100,100)))
     button_image_1b = ImageTk.PhotoImage(Image.open("home_page_iconb.png").resize((100,100)))
 except tk.TclError:
     print("Error: Ensure 'default.png' and 'clicked.png' exist in the same directory.")
-    # Create dummy images if files are not found for demonstration
+    # Create template images if images cannot be displayed
     button_image_1 = tk.PhotoImage(width=100, height=50)
     button_image_1.put("blue", to=(0,0,99,49))
     button_image_1b = tk.PhotoImage(width=100, height=50)
@@ -97,114 +96,114 @@ button1.pack(side=tk.LEFT, padx=0, pady=560)
 button1.config(command=lambda: on_button_click(button1))
 
 
-button2 = Button(page1, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button2 = Button(page1, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button2.pack(side=tk.LEFT, padx=0, pady=560)
 
-button3 = Button(page1, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button3 = Button(page1, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button3.pack(side=tk.LEFT, padx=0, pady=560)
 
-button4 = Button(page1, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button4 = Button(page1, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button4.pack(side=tk.LEFT, padx=0, pady=560)
 
-button5 = Button(page1, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button5 = Button(page1, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button5.pack(side=tk.LEFT, padx=0, pady=560)
 
-button6 = Button(page1, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button6 = Button(page1, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 2
-button1 = Button(page2, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button1 = Button(page2, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
-button2 = Button(page2, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button2 = Button(page2, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button2.pack(side=tk.LEFT, padx=0, pady=560)
 
-button3 = Button(page2, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button3 = Button(page2, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button3.pack(side=tk.LEFT, padx=0, pady=560)
 
-button4 = Button(page2, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button4 = Button(page2, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button4.pack(side=tk.LEFT, padx=0, pady=560)
 
-button5 = Button(page2, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button5 = Button(page2, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button5.pack(side=tk.LEFT, padx=0, pady=560)
 
-button6 = Button(page2, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button6 = Button(page2, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 3
-button1 = Button(page3, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button1 = Button(page3, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
-button2 = Button(page3, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button2 = Button(page3, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button2.pack(side=tk.LEFT, padx=0, pady=560)
 
-button3 = Button(page3, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button3 = Button(page3, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button3.pack(side=tk.LEFT, padx=0, pady=560)
 
-button4 = Button(page3, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button4 = Button(page3, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button4.pack(side=tk.LEFT, padx=0, pady=560)
 
-button5 = Button(page3, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button5 = Button(page3, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button5.pack(side=tk.LEFT, padx=0, pady=560)
 
-button6 = Button(page3, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button6 = Button(page3, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 4
-button1 = Button(page4, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button1 = Button(page4, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
-button2 = Button(page4, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button2 = Button(page4, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button2.pack(side=tk.LEFT, padx=0, pady=560)
 
-button3 = Button(page4, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button3 = Button(page4, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button3.pack(side=tk.LEFT, padx=0, pady=560)
 
-button4 = Button(page4, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button4 = Button(page4, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button4.pack(side=tk.LEFT, padx=0, pady=560)
 
-button5 = Button(page4, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button5 = Button(page4, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button5.pack(side=tk.LEFT, padx=0, pady=560)
 
-button6 = Button(page4, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button6 = Button(page4, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 5
-button1 = Button(page5, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button1 = Button(page5, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button1.pack(side=tk.LEFT, padx=0, pady=560) 
 
-button2 = Button(page5, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button2 = Button(page5, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button2.pack(side=tk.LEFT, padx=0, pady=560)
 
-button3 = Button(page5, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button3 = Button(page5, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button3.pack(side=tk.LEFT, padx=0, pady=560)
 
-button4 = Button(page5, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button4 = Button(page5, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button4.pack(side=tk.LEFT, padx=0, pady=560)
 
-button5 = Button(page5, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button5 = Button(page5, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button5.pack(side=tk.LEFT, padx=0, pady=560)
 
-button6 = Button(page5, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button6 = Button(page5, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 6
-button1 = Button(page6, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button1 = Button(page6, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button1.pack(side=tk.LEFT, padx=0, pady=560)
 
-button2 = Button(page6, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button2 = Button(page6, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button2.pack(side=tk.LEFT, padx=0, pady=560)
 
-button3 = Button(page6, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button3 = Button(page6, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button3.pack(side=tk.LEFT, padx=0, pady=560)
 
-button4 = Button(page6, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button4 = Button(page6, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button4.pack(side=tk.LEFT, padx=0, pady=560)
 
-button5 = Button(page6, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button5 = Button(page6, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button5.pack(side=tk.LEFT, padx=0, pady=560)
 
-button6 = Button(page6, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#111545")
+button6 = Button(page6, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
 button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Page 1 (Frame 1) will show on the initial window when run
