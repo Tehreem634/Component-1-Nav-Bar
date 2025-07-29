@@ -90,23 +90,23 @@ label6.pack(pady=20)
 
 # Displaying buttons on page 1 that lead to their own frames
 button1 = Button(page1, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
-button1.pack()
+button1.grid(row=0, column=0, sticky="nsew")
 button1.config(command=lambda: on_button_click(button1))
 
 button2 = Button(page1, image=button_image_2, borderwidth=0, command=lambda: page2.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
-button2.pack()
+button2.pack(side=tk.LEFT, padx=0, pady=560)
 
 button3 = Button(page1, image=button_image_3, borderwidth=0, command=lambda: page3.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
-button3.pack()
+button3.pack(side=tk.LEFT, padx=0, pady=560)
 
 button4 = Button(page1, image=button_image_4, borderwidth=0, command=lambda: page4.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
-button4.pack()
+button4.pack(side=tk.LEFT, padx=0, pady=560)
 
 button5 = Button(page1, image=button_image_5, borderwidth=0, command=lambda: page5.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
-button5.pack()
+button5.pack(side=tk.LEFT, padx=0, pady=560)
 
 button6 = Button(page1, image=button_image_6, borderwidth=0, command=lambda: page6.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
-button6.pack()
+button6.pack(side=tk.LEFT, padx=0, pady=560)
 
 # Displaying buttons on page 2 that lead to their own frames
 button1 = Button(page2, image=button_image_1, borderwidth=0, command=lambda: page1.tkraise(), font=style2, bg="#070B34", activebackground="#070B34")
