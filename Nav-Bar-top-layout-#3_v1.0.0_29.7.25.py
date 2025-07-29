@@ -3,7 +3,7 @@ COMPONENT #1
 [Navigation Bar]
 
 Name: Tehreem Fatima
-Date: 16/07/2025 - 24/07/2025
+Date: 29/07/2025 - 29/07/2025
 Purpose: Create a working navigation bar on the bottom of my app frame. 
 """
 
